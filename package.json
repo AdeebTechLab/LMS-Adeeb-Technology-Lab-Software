@@ -1,0 +1,41 @@
+{
+  "name": "lms-adeeb-technology-lab",
+  "version": "2.0.0",
+  "description": "LMS Adeeb Technology Lab - Desktop App",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win"
+  },
+  "build": {
+    "appId": "com.adeebtechlab.lms",
+    "productName": "LMS Adeeb Technology Lab",
+    "directories": {
+      "buildResources": "assets",
+      "output": "dist"
+    },
+    "win": {
+      "icon": "assets/icon.png",
+      "target": [
+        "appx"
+      ]
+    },
+    "appx": {
+      "applicationId": "AdeebTechLabLMS",
+      "identityName": "5456AdeebTechnologyLab.LMSAdeebTechnologyLab",
+      "publisher": "CN=EC00762E-54A2-4031-A40F-98E273856ED8",
+      "publisherDisplayName": "Adeeb Technology Lab",
+      "backgroundColor": "#1e1e2e",
+      "languages": [
+        "en-US"
+      ],
+      "showNameOnTiles": true
+    }
+  },
+  "author": "Salman Adeeb",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^29.0.0",
+    "electron-builder": "^24.13.1"
+  }
+}
