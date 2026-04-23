@@ -1,13 +1,16 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, nativeImage } = require('electron');
 const path = require('path');
 
 function createWindow() {
+  const iconPath = path.join(__dirname, 'assets', 'icon.ico');
+  const appIcon = nativeImage.createFromPath(iconPath);
+
   const win = new BrowserWindow({
     width: 1200,
     height: 800,
     autoHideMenuBar: true,
-    // The icon for the window top-left corner
-    icon: path.join(__dirname, 'assets', 'icon.png'),
+    // Using nativeImage with .ico for best quality across all sizes
+    icon: appIcon,
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true
