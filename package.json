@@ -1,6 +1,6 @@
 {
   "name": "lms-adeeb-technology-lab",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "LMS Adeeb Technology Lab - Desktop App",
   "main": "main.js",
   "scripts": {
@@ -14,10 +14,19 @@
       "buildResources": "assets",
       "output": "dist"
     },
+    "files": [
+      "main.js",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "assets",
+        "to": "assets"
+      }
+    ],
     "win": {
       "icon": "assets/icon.ico",
       "target": [
-        "nsis",
         "appx"
       ]
     },
