@@ -1,6 +1,6 @@
 {
   "name": "lms-adeeb-technology-lab",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "description": "LMS Adeeb Technology Lab - Desktop App",
   "main": "main.js",
   "scripts": {
